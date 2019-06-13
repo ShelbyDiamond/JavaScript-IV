@@ -120,10 +120,10 @@ class ProjectManager extends Instructor {
 // });
 
 // const dan = new Instructor({
-//     name:
-//     age:
-//     location:
-//     specialty:
-//     favoritelanguage:
-//     catchphrase:
+//     name: "Dan Levy"
+//     age: "21"
+//     location: "Devner, Colorado"
+//     specialty: "Front end computer code"
+//     favoritelanguage: "Javascript"
+//     catchphrase: "meow"
 // })
