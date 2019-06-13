@@ -55,11 +55,28 @@ Here is where I put my Student class:
     - `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
   */
 
-// const ben = new Student({
-//   name: "Ben Wilson",
-//   age: "24",
-//   location: "Mesa, Arizona"
-// });
+class Student extends People {
+  constructor(props) {
+    super(props);
+    this.previousBackground = props.previousBackground;
+    this.className = props.className;
+    this.favSubjects = props.favSubjects;
+  }
+  listsSubjects() {
+    return `This is a list of ${this.name}'s favorite subjects: ${
+      this.favSubjects
+    }.`;
+  }
+  PRAssignment() {
+    return `${this.name} has submitted a pull request for ${subject}.`;
+  }
+}
+
+const ben = new Student({
+  name: "Ben Wilson",
+  age: "24",
+  location: "Mesa, Arizona"
+});
 
 // const jashele = new Student({
 //   name: "Jashele Tillman",
@@ -72,5 +89,12 @@ Here is where I put my Student class:
 //   age: "20",
 //   location: "Sacramento, California"
 // });
-// console.log(ben.speak());
-// console.log(ben.speak.call(jashele));
+
+// const dan = new Instructor({
+//     name:
+//     age:
+//     location:
+//     specialty:
+//     favoritelanguage:
+//     catchphrase:
+// })
