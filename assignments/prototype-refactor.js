@@ -60,6 +60,14 @@ Humanoid.prototype.greet = function() {
   return `${this.name} offers a greeting in ${this.language}`;
 };
 
+class Humanoid extends CharacterStats {
+  constructor(type) {
+    super(type);
+    this.team = type.team;
+    this.weapons = type.weapons;
+    this.language = type.language;
+  }
+}
 /*
  * Inheritance chain: GameObject -> CharacterStats -> Humanoid
  * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
