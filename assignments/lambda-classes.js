@@ -70,13 +70,42 @@ class Student extends People {
   PRAssignment() {
     return `${this.name} has submitted a pull request for ${subject}.`;
   }
+  sprintChallenge() {
+    return `${this.name} has begun sprint challenge on ${subject}.`;
+  }
 }
 
-const ben = new Student({
-  name: "Ben Wilson",
-  age: "24",
-  location: "Mesa, Arizona"
-});
+/* Project Manager
+Here is where I put my PM  class:
+    - ProjectManagers are extensions of Instructors
+    - ProjectManagers have the following unique props:
+    - `gradClassName`: i.e. CS1
+    - `favInstructor`: i.e. Sean
+    - ProjectManagers have the following Methods:
+    - `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
+    - `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`*/
+
+class ProjectManager extends Instructor {
+  constructor(pm) {
+    super(pm);
+    this.gradClassName = pm.gradClassName;
+    this.favInstructor = pm.favInstructor;
+  }
+  standup() {
+    return `${this.name}, announces to ${
+      this.gradClassName
+    }, @channel standy times!`;
+  }
+  debugsCode() {
+    return `${this.name} debugs ${student.name}'s code on ${student.subject}`;
+  }
+}
+
+// const ben = new Student({
+//   name: "Ben Wilson",
+//   age: "24",
+//   location: "Mesa, Arizona"
+// });
 
 // const jashele = new Student({
 //   name: "Jashele Tillman",
