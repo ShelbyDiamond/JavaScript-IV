@@ -37,7 +37,7 @@ class CharacterStats extends GameObject {
     this.healthPoints = statistics.healthPoints;
   }
   takeDamage() {
-    return `${this.name} took damage.git  Owie!`;
+    return `${this.name} took damage. Owie!`;
   }
 }
 /*
