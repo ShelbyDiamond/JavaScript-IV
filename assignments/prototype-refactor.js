@@ -16,7 +16,6 @@ Prototype Refactor
 */
 class GameObject {
   constructor(attributes) {
-    super(attributes);
     this.createdAt = attributes.createdAt;
     this.name = attributes.name;
     this.dimensions = attributes.dimensions;
@@ -56,7 +55,7 @@ class Humanoid extends CharacterStats {
     this.weapons = type.weapons;
     this.language = type.language;
   }
-  Humanoid() {
+  greet() {
     return `${this.name} offers a greeting in ${
       this.language
     }. We are so smart!`;
