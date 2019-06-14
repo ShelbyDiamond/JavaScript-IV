@@ -68,10 +68,10 @@ class Student extends People {
     }.`;
   }
   PRAssignment() {
-    return `${this.name} has submitted a pull request for ${subject}.`;
+    return `${this.name} has submitted a pull request for ${this.favSubjects}.`;
   }
   sprintChallenge() {
-    return `${this.name} has begun sprint challenge on ${subject}.`;
+    return `${this.name} has begun sprint challenge on ${this.favSubjects}.`;
   }
 }
 
@@ -97,11 +97,11 @@ class ProjectManager extends Instructor {
     }, @channel standy times!`;
   }
   debugsCode() {
-    return `${this.name} debugs ${student.name}'s code on ${student.subject}`;
+    return `${this.name} debugs ${ben.name}'s code on ${ben.favSubjects}`;
   }
 }
 
-// Students
+// ****************** Students ******************
 const ben = new Student({
   name: "Ben Wilson",
   age: "24",
@@ -129,40 +129,40 @@ const dj = new Student({
   favSubjects: "'Html', 'Python'"
 });
 
-// Instructors
+//****************** Instructors ******************
 const dan = new Instructor({
   name: "Danny Tanner",
   age: "45",
   location: "San Fransisco, California",
   specialty: "Talk Show Host",
-  favoritelanguage: "Javascript",
-  catchphrase: "Wake up!"
+  favLanguage: "Javascript",
+  catchPhrase: "Wake up!"
 });
 const jesse = new Instructor({
   name: "Jesse Pinkman",
   age: "23",
   location: "Santa Fe, New Mexico",
   specialty: "Science",
-  favoritelanguage: "Chemistry",
-  catchphrase: "Dude!"
+  favLanguage: "Chemistry",
+  catchPhrase: "Dude!"
 });
 const bjarne = new Instructor({
   name: "Bjarne Stroustrup ",
   age: "60",
   location: "New York City, New York",
   specialty: "Code writer",
-  favoritelanguage: "C++",
-  catchphrase: "Missing semicolon"
+  favLanguage: "C++",
+  catchPhrase: "Missing semicolon"
 });
 
-// Project Managers
+// ****************** Project Managers ******************
 const josh = new ProjectManager({
   name: "Josh Keslar",
   age: "28",
   location: "Mesa, Arizona",
   specialty: "Big Brother",
-  favoritelanguage: "Music",
-  catchphrase: "I think you're making a lot of sense",
+  favLanguage: "Music",
+  catchPhrase: "I think you're making a lot of sense",
   gradClassName: "Remy",
   favInstructor: "Johnny Gyro"
 });
@@ -172,8 +172,8 @@ const aj = new ProjectManager({
   age: "28",
   location: "Anywhere but here, Indiana",
   specialty: "Tutoring",
-  favoritelanguage: "C#",
-  catchphrase: "You're not wrong",
+  favLanguage: "C#",
+  catchPhrase: "You're not wrong",
   gradClassName: "WEB17",
   favInstructor: "Josh Knell"
 });
@@ -183,8 +183,33 @@ const jen = new ProjectManager({
   age: "50",
   location: "Home, Mesa",
   specialty: "Acting",
-  favoritelanguage: "English",
-  catchphrase: "It's never too late to be what you might have been",
+  favLanguage: "English",
+  catchPhrase: "It's never too late to be what you might have been",
   gradClassName: "WEB21",
   favInstructor: "Oprah"
 });
+
+/**********Testing My Code *********************Console logs*****************************************/
+
+// Instructor Tests:
+console.log(bjarne.catchPhrase);
+console.log(dan.name);
+console.log(jesse.favLanguage);
+console.log(dan.demo("Javascript"));
+console.log(jesse.grade(dj, dj.className));
+
+// Student Tests:
+console.log(ben.listsSubjects(ben.favSubject));
+console.log(jashele.PRAssignment(jashele.className));
+console.log(dj.sprintChallenge(dj.className));
+console.log(dj.name);
+console.log(jashele.previousBackground);
+console.log(ben.age);
+
+//ProjectManager Tests:
+
+console.log(josh.catchPhrase);
+console.log(aj.location);
+console.log(jen.catchPhrase);
+console.log(josh.debugsCode(jashele, "JavaScript VI"));
+console.log(aj.standup("WEB17"));
