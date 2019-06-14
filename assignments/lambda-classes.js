@@ -101,29 +101,90 @@ class ProjectManager extends Instructor {
   }
 }
 
-// const ben = new Student({
-//   name: "Ben Wilson",
-//   age: "24",
-//   location: "Mesa, Arizona"
-// });
+// Students
+const ben = new Student({
+  name: "Ben Wilson",
+  age: "24",
+  location: "Mesa, Arizona",
+  previousBackground: "Construction worker",
+  className: "WEBPT7",
+  favSubjects: "'Html', 'CSS', 'JavaScript'"
+});
 
-// const jashele = new Student({
-//   name: "Jashele Tillman",
-//   age: "23",
-//   location: "Phoenix, Arizona"
-// });
+const jashele = new Student({
+  name: "Jashele Tillman",
+  age: "23",
+  location: "Phoenix, Arizona",
+  previousBackground: "Nurse",
+  className: "WEBPT7",
+  favSubjects: "'JavaScript', 'React'"
+});
 
-// const dj = new Student({
-//   name: "DJ Coleman",
-//   age: "20",
-//   location: "Sacramento, California"
-// });
+const dj = new Student({
+  name: "DJ Coleman",
+  age: "20",
+  location: "Sacramento, California",
+  previousBackground: "Stay at home son",
+  className: "WEB20",
+  favSubjects: "'Html', 'Python'"
+});
 
-// const dan = new Instructor({
-//     name: "Dan Levy"
-//     age: "21"
-//     location: "Devner, Colorado"
-//     specialty: "Front end computer code"
-//     favoritelanguage: "Javascript"
-//     catchphrase: "meow"
-// })
+// Instructors
+const dan = new Instructor({
+  name: "Danny Tanner",
+  age: "45",
+  location: "San Fransisco, California",
+  specialty: "Talk Show Host",
+  favoritelanguage: "Javascript",
+  catchphrase: "Wake up!"
+});
+const jesse = new Instructor({
+  name: "Jesse Pinkman",
+  age: "23",
+  location: "Santa Fe, New Mexico",
+  specialty: "Science",
+  favoritelanguage: "Chemistry",
+  catchphrase: "Dude!"
+});
+const bjarne = new Instructor({
+  name: "Bjarne Stroustrup ",
+  age: "60",
+  location: "New York City, New York",
+  specialty: "Code writer",
+  favoritelanguage: "C++",
+  catchphrase: "Missing semicolon"
+});
+
+// Project Managers
+const josh = new ProjectManager({
+  name: "Josh Keslar",
+  age: "28",
+  location: "Mesa, Arizona",
+  specialty: "Big Brother",
+  favoritelanguage: "Music",
+  catchphrase: "I think you're making a lot of sense",
+  gradClassName: "Remy",
+  favInstructor: "Johnny Gyro"
+});
+
+const aj = new ProjectManager({
+  name: "AJ Brush",
+  age: "28",
+  location: "Anywhere but here, Indiana",
+  specialty: "Tutoring",
+  favoritelanguage: "C#",
+  catchphrase: "You're not wrong",
+  gradClassName: "WEB17",
+  favInstructor: "Josh Knell"
+});
+
+const jen = new ProjectManager({
+  name: "Jennifer Diamond",
+  age: "50",
+  location: "Home, Mesa",
+  specialty: "Acting",
+  favoritelanguage: "English",
+  catchphrase: "It's never too late to be what you might have been",
+  gradClassName: "WEB21",
+  favInstructor: "Oprah"
+});
