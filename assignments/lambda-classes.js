@@ -96,8 +96,10 @@ class ProjectManager extends Instructor {
       this.gradClassName
     }, @channel standy times!`;
   }
-  debugsCode() {
-    return `${this.name} debugs ${ben.name}'s code on ${ben.favSubjects}`;
+  debugsCode(student) {
+    return `${this.name} debugs ${student.name}'s code on ${
+      student.favSubjects
+    }`;
   }
 }
 
@@ -108,7 +110,7 @@ const ben = new Student({
   location: "Mesa, Arizona",
   previousBackground: "Construction worker",
   className: "WEBPT7",
-  favSubjects: "'Html', 'CSS', 'JavaScript'"
+  favSubjects: "'HTML', 'CSS', 'JavaScript'"
 });
 
 const jashele = new Student({
@@ -211,5 +213,5 @@ console.log(ben.age);
 console.log(josh.catchPhrase);
 console.log(aj.location);
 console.log(jen.catchPhrase);
-console.log(josh.debugsCode(jashele, "JavaScript VI"));
+console.log(aj.debugsCode(jashele, "JavaScript VI"));
 console.log(aj.standup("WEB17"));
